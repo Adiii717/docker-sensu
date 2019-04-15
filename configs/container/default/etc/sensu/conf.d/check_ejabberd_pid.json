@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "ejabberd_pid": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb --file-pid /var/run/ejabberd/ejabberd.pid",
+      "subscribers": [
+        "ejabberd"
+      ],
+      "interval": 60
+    }
+  }
+}
+
+

@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "redis_pid": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb --file-pid /var/run/redis/redis.pid",
+      "subscribers": [
+        "redis"
+      ],
+      "interval": 60
+    }
+  }
+}

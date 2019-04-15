@@ -1,0 +1,9 @@
+{
+  "rabbitmq": {
+    "host": "0.0.0.0",
+    "port": 5672,
+    "vhost": "/sensu_docker",
+    "user": "sensu_docker",
+    "password": "sensu_docker"
+  }
+}

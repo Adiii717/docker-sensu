@@ -1,0 +1,16 @@
+
+  {
+    "client": {
+      "name": "sensu-server",
+      "address": "127.0.0.1",
+      "environment": "development",
+      "subscriptions": [
+        "all"
+      ],
+      "socket": {
+        "bind": "127.0.0.1",
+        "port": 3030
+      }
+    }
+  }
+  

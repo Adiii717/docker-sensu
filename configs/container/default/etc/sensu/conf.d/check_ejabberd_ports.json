@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "ejabberd_ports": {
+      "command": "/opt/sensu/embedded/bin/check-ports.rb -h psensu.goabode.com -p 5222,5280 -t 10",
+      "subscribers": [
+        "ejabberd"
+      ],
+      "interval": 60
+    }
+  }
+}

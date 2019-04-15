@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "cpu_check": {
+    "command": "/opt/sensu/embedded/bin/check-cpu.rb -w 70 -c 90",
+    "subscribers": [
+        "all"
+      ],
+      "interval": 60
+    },
+    "memory_check": {
+      "command": "/opt/sensu/embedded/bin/check-memory-percent.rb -w 60 -c 80",
+      "subscribers": [
+        "all"
+      ],
+      "interval": 60
+    },
+    "disk_check": {
+      "command": "/opt/sensu/embedded/bin/check-disk-usage.rb -w 65 -c 85",
+      "subscribers": [
+        "all"
+      ],
+      "interval": 60
+    }
+  }
+}
+

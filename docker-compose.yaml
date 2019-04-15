@@ -1,0 +1,22 @@
+
+# version: '2'
+#   sensu_docker:
+#     build: .
+#     # command: rabbitmqctl add_vhost /sensu_docker; rabbitmqctl add_user sensu_docker sensu_docker;sudo rabbitmqctl set_permissions -p /sensu_docker sensu_docker ".*" ".*" ".*";
+
+
+version: '3.3'
+services:
+  sensu_docker:
+    privileged: true
+    build: .
+    ports:
+      - '4567:4567'  
+    ports:
+      - '3000:3000'
+    volumes: 
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    # command: bash -c "service rabbitmq-server start ;rabbitmqctl add_vhost /sensu_docker; rabbitmqctl add_user sensu_docker sensu_docker;sudo rabbitmqctl set_permissions -p /sensu_docker sensu_docker ".*" ".*" ".*";service redis-server start;service sensu-api restart;service sensu-server restart; service uchiwa restart; tail -f /dev/null"
+    # entrypoint: /usr/sbin/init
+    # sensu:
+  #   image: "sensudocker_sensu_docker:latest"

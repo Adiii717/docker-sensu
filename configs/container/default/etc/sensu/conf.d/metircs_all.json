@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "cpu_metrics": {
+      "type": "metric",
+      "command": "/opt/sensu/embedded/bin/metrics-cpu-pcnt-usage.rb",
+      "subscribers": [
+        "all"
+      ],
+      "interval": 10
+    },
+    "memory_metircs": {
+      "type": "metric",
+      "command": "/opt/sensu/embedded/bin/metrics-memory-percent.rb",
+      "subscribers": [
+        "all"
+      ],
+      "interval": 30
+    },
+    "disk_metircs": {
+      "type": "metric",
+      "command": "/opt/sensu/embedded/bin/metrics-disk-usage.rb",
+      "subscribers": [
+        "all"
+      ],
+      "interval": 30
+    }
+  }
+}
